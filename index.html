@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Action Pledge</title>
+  <!-- style.css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Join the Climate Action Movement</h1>
+    <p>Your pledge matters. Let's make a difference together.</p>
+    <button onclick="document.getElementById('pledge-form').scrollIntoView({ behavior: 'smooth' })">Take the Pledge</button>
+  </section>
+
+  <!-- Live KPIs -->
+  <section id="kpis">
+    <h2>Live Impact</h2>
+    <div class="kpi">Target Pledges: 1,000,000</div>
+    <div class="kpi">Achieved Pledges: <span id="pledge-count">0</span></div>
+    <div class="kpi">Students: <span id="student-count">0</span></div>
+   Professionals: <span id="pro-count">0</span></div>
+  </section>
+
+  <!-- Why Take Action -->
+  <section id="why">
+    <h2>Why Take Climate Action?</h2>
+    <p>Every small step counts. Your pledge contributes to a global movement for a better planet.</p>
+  </section>
+
+  <!-- Pledge Form -->
+  <section id="pledge-form">
+    <h2>Pledge Form</h2>
+    <form id="form">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="tel" id="mobile" placeholder="Mobile Number" required />
+      <input type="text" id="state" placeholder="State" />
+      <select id="profile">
+        <option value="Student">Student</option>
+        <option value="Professional">Working Professional</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <h3>Commitments</h3>
+      <div id="commitments">
+        <label><input type="checkbox" value="Recycle" /> Recycle regularly</label>
+        <label><input type="checkbox" value="Bike" /> Use bike/public transport</label>
+        <label><input type="checkbox" value="Save Energy" /> Save electricity</label>
+        <label><input type="checkbox" value="Plant Trees" /> Plant trees</label>
+        <label><input type="checkbox" value="Avoid Plastic" /> Avoid single-use plastic</label>
+        <label><input type="checkbox" value="Educate Others" /> Educate others</label>
+      </div>
+
+      <button type="submit">Submit Pledge</button>
+    </form>
+    <p class="privacy-note">Mobile Number and Email are required for validation but never shown publicly. Data is used only for verification and engagement.</p>
+  </section>
+
+  <!-- Certificate -->
+  <section id="certificate" style="display:none;">
+    <h2>Your Certificate</h2>
+    <p id="cert-name"></p>
+    <p>“Cool Enough to Care!”</p>
+    <p id="cert-stars"></p>
+  </section>
+
+  <!-- Pledge Wall -->
+  <section id="pledge-wall">
+    <h2>Pledge Wall</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Date</th><th>State</th><th>Profile</th><th>⭐</th>
+        </tr>
+      </thead>
+      <tbody id="wall-body"></tbody>
+    </table>
+  </section>
+
+  <script src="script.js">
+    
+  </script>
+</body>
+</html>
